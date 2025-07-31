@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Онлайн Переводчик</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Онлайн Переводчик</h1>
+        <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </div>
+
+    <div id="controls">
+        <div class="control-group">
+            <label for="source-lang">Исходный язык:</label>
+            <select id="source-lang">
+                <option value="auto">Автоопределение</option>
+                <option value="en">Английский</option>
+                <option value="de">Немецкий</option>
+                <option value="fr">Французский</option>
+                <option value="es">Испанский</option>
+                <option value="it">Итальянский</option>
+                <option value="ru">Русский</option>
+                <option value="la">Латынь</option>
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="target-lang">Целевой язык:</label>
+            <select id="target-lang">
+                <option value="ru">Русский</option>
+                <option value="en">Английский</option>
+                <option value="de">Немецкий</option>
+                <option value="fr">Французский</option>
+                <option value="es">Испанский</option>
+                <option value="it">Итальянский</option>
+                <option value="la">Латынь</option>
+            </select>
+        </div>
+        <textarea id="user-text" placeholder="Введите текст для перевода здесь..."></textarea>
+        <button onclick="loadText()">Загрузить текст</button>
+    </div>
+
+    <div id="text-container">Пожалуйста, введите текст и нажмите "Загрузить текст"</div>
+
+    <div id="translation-container">
+        <button id="translate-btn" onclick="translateSelection()" disabled>Перевести выделенное</button>
+        <div class="hint">Выделите текст и нажмите пробел для перевода</div>
+        <div id="translation">
+            <span style="color: #7f8c8d;">Выделите текст для перевода</span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
