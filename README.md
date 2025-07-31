@@ -1,7 +1,3 @@
-Вот файл `README.md` на русском и английском языках для вашего репозитория:
-
----
-
 # Language Learning Web App (Flask)  
 # Веб-приложение для изучения языков (Flask)  
 
@@ -48,8 +44,3 @@ cd translator
 pip install -r requirements.txt
 python app.py
 ```  
-
----  
-
-Если нужно что-то изменить или добавить, дайте знать!  
-Let me know if you'd like to modify or expand anything!
